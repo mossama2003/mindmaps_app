@@ -1,6 +1,6 @@
 # mindmaps_app
 
-A new Flutter project.
+Mind Maps Quran
 
 ## Getting Started
 
