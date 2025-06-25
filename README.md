@@ -1,6 +1,6 @@
 # mindmaps_app
 
-Mind Maps Quran
+Quran Mind Maps
 
 ## Getting Started
 
