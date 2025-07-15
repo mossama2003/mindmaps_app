@@ -1,3 +1,3 @@
 class AppConstants {
-  static final String lamaSansFont = 'LamaSans';
+  static final String tajawalFont = 'Tajawal';
 }
