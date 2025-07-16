@@ -1,8 +1,10 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:mindmaps_app/core/constants/app_assets.dart';
-import 'package:mindmaps_app/core/widgets/custom_button.dart';
-import 'package:mindmaps_app/core/widgets/custom_icon.dart';
+import '../../../../../core/constants/app_assets.dart';
+import '../../../../../core/helper/app_navigator.dart';
+import '../../../../../core/widgets/custom_button.dart';
+import '../../../../../core/widgets/custom_icon.dart';
+import '../../../../parent_sign_up/presentation/pages/parent_sign_up_screen.dart';
 
 import '../../../../../core/constants/app_constants.dart';
 import '../../../../../core/style/app_colors.dart';
@@ -140,7 +142,9 @@ class _ParentSignInScreenState extends State<ParentSignInScreen> {
               ),
               SizedBox(height: AppSize.getHeight(15)),
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  AppNavigator.replace(ParentSignUpScreen());
+                },
                 child: RichText(
                   text: TextSpan(
                     text: 'sign_in.dont_have_account'.tr(),

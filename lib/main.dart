@@ -1,12 +1,10 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:mindmaps_app/core/helper/app_navigator.dart';
-import 'package:mindmaps_app/core/style/app_theme.dart';
-import 'package:mindmaps_app/features/intro/presentation/screens/intro_screen.dart';
-import 'package:mindmaps_app/features/parent_sign_up/presentation/pages/parent_sign_up_screen.dart';
+import 'core/helper/app_navigator.dart';
+import 'core/style/app_theme.dart';
+import 'features/parent_sign_up/presentation/pages/parent_sign_up_screen.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'core/helper/app_locals.dart';
 import 'core/network/local/cache/cache_helper.dart';
 import 'core/network/remote/apis/dio_helper.dart';

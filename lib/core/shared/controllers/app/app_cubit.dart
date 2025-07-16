@@ -1,5 +1,6 @@
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
 import '../../../network/local/cache/cache_helper.dart';
 import '../../../style/app_theme.dart';
 import '../../models/user_model.dart';

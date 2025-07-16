@@ -1,11 +1,11 @@
-import 'package:flutter_intl_phone_field/flutter_intl_phone_field.dart';
-import 'package:flutter_intl_phone_field/country_picker_dialog.dart';
-import 'package:flutter_intl_phone_field/phone_number.dart';
-import 'package:flutter_intl_phone_field/countries.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_intl_phone_field/countries.dart';
+import 'package:flutter_intl_phone_field/country_picker_dialog.dart';
+import 'package:flutter_intl_phone_field/flutter_intl_phone_field.dart';
+import 'package:flutter_intl_phone_field/phone_number.dart';
 
-import '../network/local/cache/cache_helper.dart';
 import '../helper/app_validators.dart';
+import '../network/local/cache/cache_helper.dart';
 import '../style/app_colors.dart';
 import '../style/app_size.dart';
 
