@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../constants/app_constants.dart';
 import '../style/app_colors.dart';
 import '../style/app_size.dart';
 import 'custom_icon.dart';
@@ -71,9 +72,10 @@ class CustomFieldText extends StatelessWidget {
           Text(
             title!,
             style: TextStyle(
-              color: AppColors.grey70,
-              fontSize: AppSize.font(14),
-              fontWeight: FontWeight.w700,
+              color: AppColors.black,
+              fontSize: AppSize.font(16),
+              fontWeight: FontWeight.w500,
+              fontFamily: AppConstants.tajawalFont,
             ),
           ),
           SizedBox(height: AppSize.getHeight(8)),
@@ -92,39 +94,50 @@ class CustomFieldText extends StatelessWidget {
           keyboardType: keyboardType,
           autovalidateMode: AutovalidateMode.onUserInteraction,
           style: TextStyle(
-            fontSize: AppSize.font(14),
-            fontWeight: FontWeight.w600,
+            fontSize: AppSize.font(20),
+            fontWeight: FontWeight.w300,
+            fontFamily: AppConstants.tajawalFont,
+            
           ),
           validator: validator,
           inputFormatters: inputFormatters,
           decoration: InputDecoration(
-            border: InputBorder.none,
-            // removes default underline
-            suffixIconConstraints: BoxConstraints(
-              minHeight: AppSize.getHeight(40),
-              maxHeight: AppSize.getHeight(40),
+            filled: true,
+            fillColor: AppColors.white,
+            hintText: hintText ?? labelText ?? '',
+            contentPadding: padding ?? AppSize.padding(all: 25),
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(AppSize.radius(12)),
+              borderSide: BorderSide(color: AppColors.black.withValues(alpha: 0.4)),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(AppSize.radius(12)),
+              borderSide: BorderSide(color: AppColors.primary),
+            ),
+            errorBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(AppSize.radius(12)),
+              borderSide: BorderSide(color: Colors.red),
+            ),
+            focusedErrorBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(AppSize.radius(12)),
+              borderSide: BorderSide(color: Colors.redAccent),
             ),
             prefixIconConstraints: BoxConstraints(
-              minHeight: AppSize.getHeight(40),
-              maxHeight: AppSize.getHeight(40),
+              minHeight: AppSize.getHeight(24),
+              maxHeight: AppSize.getHeight(24),
             ),
-            contentPadding: padding,
-            hintText: hintText ?? labelText ?? '',
+            suffixIconConstraints: BoxConstraints(
+              minHeight: AppSize.getHeight(24),
+              maxHeight: AppSize.getHeight(24),
+            ),
             prefixIcon: iconStart != null
                 ? Padding(
-                    padding: AppSize.padding(start: 10),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        CustomIcon(
-                          icon: iconStart!,
-                          withColor: iconColor,
-                          width: AppSize.getSize(50),
-                          color: iconColor ? null : AppColors.grey70,
-                        ),
-                      ],
+                    padding: AppSize.padding(start: 10, end: 18),
+                    child: CustomIcon(
+                      icon: iconStart!,
+                      withColor: iconColor,
+                      width: AppSize.getSize(24),
+                      color: iconColor ? null : AppColors.grey70,
                     ),
                   )
                 : null,

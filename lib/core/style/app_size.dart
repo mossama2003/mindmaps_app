@@ -130,4 +130,9 @@ class AppSize {
       bottom: getHeight(bottom ?? 0),
     );
   }
+
+  /// GET RADIUS (USUALLY BASED ON WIDTH).
+  static double radius(double px) {
+    return getSize(px);
+  }
 }

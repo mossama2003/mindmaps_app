@@ -13,7 +13,10 @@ class AppColors {
   static const Color warning = Color(0xffFA9D00);
   static const Color danger = Color(0xffEC1C1C);
 
-  static const Color primary = Color(0xff375CA9);
+
+  static const Color blanchedAlmond = Color(0xffFFF1CA);
+
+  static const Color primary = Color(0xff2E7D32);
 
   static const Color secondaryLight = black;
   static const Color secondaryDark = white;

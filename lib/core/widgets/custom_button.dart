@@ -34,13 +34,13 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: loading ? null : onTap,
-      borderRadius: BorderRadius.circular(AppSize.getHeight(6)),
+      borderRadius: BorderRadius.circular(6),
       child: Container(
         width: width ?? double.infinity,
         height: height ?? AppSize.getHeight(52),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(AppSize.getSize(6)),
-          color: loading ? AppColors.grey30 : bgColor ?? AppColors.blue300,
+          borderRadius: BorderRadius.circular(8),
+          color: loading ? AppColors.grey30 : bgColor ?? AppColors.primary,
           border: borderColor != null && !loading
               ? Border.all(color: borderColor!)
               : null,
