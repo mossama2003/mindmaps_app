@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -12,7 +13,7 @@ class ParentSignUpScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: AppColors.white,
         body: Stack(
           children: [
             Positioned(
@@ -31,7 +32,7 @@ class ParentSignUpScreen extends StatelessWidget {
                 width: 80.w,
               ),
             ),
-        
+
             /// Content
             SingleChildScrollView(
               padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 16.h),
@@ -40,7 +41,7 @@ class ParentSignUpScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   SizedBox(height: 12.h),
-        
+
                   /// Logo in grey circle
                   Center(
                     child: Container(
@@ -60,10 +61,10 @@ class ParentSignUpScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 16.h),
-        
+
                   /// Title
                   Text(
-                    'تسجيل حساب ولي الأمر',
+                    'sign_up.parent_sign_up'.tr(),
                     style: TextStyle(
                       fontSize: 20.sp,
                       fontWeight: FontWeight.bold,
@@ -71,10 +72,10 @@ class ParentSignUpScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 8.h),
-        
+
                   /// Subtitle
                   Text(
-                    'أنشئ حسابك لمتابعة تقدم طفلك في حفظ القرآن',
+                    'sign_up.subtitle_parent_sign_up'.tr(),
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 14.sp,
@@ -82,37 +83,44 @@ class ParentSignUpScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 24.h),
-        
+
                   /// Name Field
                   CustomFieldText(
-                    title: "الاسم بالكامل",
+                    title: "sign_up.full_name".tr(),
                     controller: TextEditingController(),
-                    hintText: 'ادخل اسمك بالكامل',
-                    labelText: 'الاسم بالكامل',
+                    hintText: "sign_up.enter_name".tr(),
                     iconStart: AppAssetsIcons.personIcon,
                   ),
                   SizedBox(height: 16.h),
-        
+
                   /// Phone Field
                   CustomFieldText(
-                    title: "رقم الهاتف",
+                    title: 'sign_in.phone_number'.tr(),
+                    hintText: 'sign_in.enter_phone_number'.tr(),
                     controller: TextEditingController(),
-                    hintText: 'ادخل رقم الهاتف',
-                    labelText: 'رقم الهاتف',
-                    iconStart: AppAssetsIcons.phoneIcon,
+                    iconStart: AppAssetsIcons.phone,
+                    keyboardType: TextInputType.phone,
                   ),
                   SizedBox(height: 16.h),
-        
+
                   /// Password Field
                   CustomFieldText(
-                    title: "كلمة المرور",
+                    title: 'sign_in.password'.tr(),
+                    hintText: 'sign_in.enter_password'.tr(),
                     controller: TextEditingController(),
-                    hintText: 'ادخل كلمة المرور',
-                    labelText: 'كلمة المرور',
-                    iconStart: AppAssetsIcons.lockIcon,
+                    iconStart: AppAssetsIcons.password,
+                    iconEnd: AppAssetsIcons.openEye,
+                    // iconEnd: _obscurePassword ? 'ic_eye_hide' : 'ic_eye',
+                    // obscureText: _obscurePassword,
+                    // iconEndTap: () {
+                    //   setState(() {
+                    //     _obscurePassword = !_obscurePassword;
+                    //   });
+                    // },
+                    // divider: true,
                   ),
                   SizedBox(height: 24.h),
-        
+
                   /// Next Button
                   SizedBox(
                     width: double.infinity,
@@ -120,13 +128,13 @@ class ParentSignUpScreen extends StatelessWidget {
                     child: ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xFF3C963A),
+                        backgroundColor: AppColors.primary,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8.r),
                         ),
                       ),
                       child: Text(
-                        'التالي',
+                        'sign_up.next'.tr(),
                         style: TextStyle(
                           fontSize: 16.sp,
                           fontWeight: FontWeight.bold,
@@ -136,31 +144,31 @@ class ParentSignUpScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 20.h),
-        
+
                   /// OR
                   Text(
-                    'او',
-                    style: TextStyle(fontSize: 14.sp, color: Colors.black),
+                    'sign_in.or'.tr(),
+                    style: TextStyle(fontSize: 14.sp, color: AppColors.black),
                   ),
                   SizedBox(height: 12.h),
-        
+
                   /// Social Icons
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      SvgPicture.asset(AppAssetsSvg.google, width: 32.w),
-                      SizedBox(width: 16.w),
                       SvgPicture.asset(AppAssetsSvg.apple, width: 32.w),
+                      SizedBox(width: 16.w),
+                      SvgPicture.asset(AppAssetsSvg.google, width: 32.w),
                     ],
                   ),
                   SizedBox(height: 24.h),
-        
+
                   /// Bottom Text + Link
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'لديك حساب بالفعل؟ ',
+                        "sign_up.already_have_account".tr(),
                         style: TextStyle(fontSize: 14.sp),
                       ),
                       GestureDetector(
@@ -168,11 +176,11 @@ class ParentSignUpScreen extends StatelessWidget {
                           // Navigate to login
                         },
                         child: Text(
-                          'تسجيل الدخول',
+                          "sign_up.login".tr(),
                           style: TextStyle(
                             fontSize: 14.sp,
                             fontWeight: FontWeight.bold,
-                            color: const Color(0xFF3C963A),
+                            color: AppColors.primary,
                           ),
                         ),
                       ),

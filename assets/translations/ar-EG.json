@@ -94,5 +94,14 @@
     "or": "او",
     "dont_have_account": "ليس لديك حساب؟",
     "create_account": "أنشئ حساب جديد"
+  },
+  "sign_up": {
+    "parent_sign_up": "تسجيل دخول ولي الأمر",
+    "subtitle_parent_sign_up": "أنشئ حسابك لمتابعة تقدم طفلك في حفظ القرآن ",
+    "already_have_account": "لديك حساب بالفعل؟ ",
+    "full_name": "الاسم بالكامل",
+    "enter_name": "ادخل اسمك بالكامل",
+    "login": "تسجيل الدخول",
+    "next": "التالي"
   }
 }
