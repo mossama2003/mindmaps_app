@@ -8,7 +8,7 @@ class AppAssetsSvg {
 
   static final String intro = '$svg/intro.svg';
 
-  static final String logo = '$svg/logo.svg';
+  static final String logo = '$svg/sign_up_app_logo.svg';
 
   static final String welcomeEmployee = '$svg/welcome_employee.svg';
   static final String welcomeRecruiter = '$svg/welcome_recruiter.svg';
@@ -20,6 +20,16 @@ class AppAssetsSvg {
   static final String onboardingRecruiter1 = '$svg/onboarding_recruiter_1.svg';
   static final String onboardingRecruiter2 = '$svg/onboarding_recruiter_2.svg';
   static final String onboardingRecruiter3 = '$svg/onboarding_recruiter_3.svg';
+
+  //  Sign up SVGs
+  static final String signUpAppLogo = '$svg/sign_up_app_logo.svg';
+
+  static final String signUpBackgroundShape =
+      '$svg/sign_up_background_shape.svg';
+  static final String signUpBackgroundShape2 =
+      '$svg/sign_up_background_shape2.svg';
+  static final String google = '$svg/google.svg';
+  static final String apple = '$svg/apple.svg';
 
   static final String chatBot = '$svg/chat_bot.svg';
   static final String uploadImage = '$svg/upload_image.svg';
@@ -38,6 +48,9 @@ class AppAssetsImages {
 }
 
 class AppAssetsIcons {
+  static final String personIcon = '$icons/person_icon.svg';
+  static final String phoneIcon = '$icons/phone_icon.svg';
+  static final String lockIcon = '$icons/lock_icon.svg';
   static final String calendar = '$icons/calendar.svg';
   static final String profile = '$icons/profile.svg';
   static final String home = '$icons/home.svg';
