@@ -23,22 +23,22 @@ class ParentSignUpScreen extends StatelessWidget {
           height: double.infinity,
           child: Stack(
             children: [
-              Positioned(
-                top: 0,
-                left: 0,
-                child: SvgPicture.asset(
-                  AppAssetsSvg.signUpBackgroundShape,
-                  width: AppSize.getWidth(80),
-                ),
+            Positioned(
+              top: 0,
+              left: 0,
+              child: CustomSvg(
+                svg: AppAssetsSvg.signUpBackgroundShape,
+                width: AppSize.getWidth(80),
               ),
-              Positioned(
-                bottom: 0,
-                right: 0,
-                child: SvgPicture.asset(
-                  AppAssetsSvg.signUpBackgroundShape2,
-                  width: AppSize.getWidth(80),
-                ),
+            ),
+            Positioned(
+              bottom: 0,
+              right: 0,
+              child: CustomSvg(
+                svg: AppAssetsSvg.signUpBackgroundShape2,
+                width: AppSize.getWidth(80),
               ),
+            ),
 
               SingleChildScrollView(
                 padding: AppSize.padding(horizontal: 24, vertical: 16),
