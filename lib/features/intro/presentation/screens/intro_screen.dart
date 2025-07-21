@@ -22,7 +22,7 @@ class IntroScreen extends StatelessWidget {
             alignment: Alignment.topCenter,
             children: [
               Container(
-                margin: AppSize.margin(top: 130),
+                margin: AppSize.margin(top: 100),
                 width: AppSize.getWidth(350),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),

@@ -3,7 +3,6 @@ const String icons = 'assets/icons';
 const String images = 'assets/images';
 
 class AppAssetsSvg {
-
   // another svgs
   static final String empty = '$svg/empty.svg';
   static final String error = '$svg/error.svg';
@@ -23,8 +22,10 @@ class AppAssetsSvg {
   static final String onboardingRecruiter2 = '$svg/onboarding_recruiter_2.svg';
   static final String onboardingRecruiter3 = '$svg/onboarding_recruiter_3.svg';
 
-  static final String chatBot = '$svg/chat_bot.svg';
   static final String uploadImage = '$svg/upload_image.svg';
+
+  static final String signUpBackgroundShape = '$svg/background_shape.svg';
+  static final String signUpBackgroundShape2 = '$svg/background_shape2.svg';
 }
 
 class AppAssetsImages {

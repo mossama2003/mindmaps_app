@@ -92,7 +92,7 @@
     "enter_password": "ادخل كلمة المرور",
     "forgot_password": "نسيت كلمه السر؟",
     "or": "او",
-    "dont_have_account": "ليس لديك حساب؟",
+    "dont_have_account": "ليس لديك حساب؟ ",
     "create_account": "أنشئ حساب جديد"
   }
 }

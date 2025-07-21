@@ -69,7 +69,7 @@ class AppTheme {
         splashColor: Colors.transparent,
         highlightColor: Colors.transparent,
         visualDensity: VisualDensity.adaptivePlatformDensity,
-        scaffoldBackgroundColor: AppColors.scaffoldLight,
+        scaffoldBackgroundColor: AppColors.white,
         colorScheme: ColorScheme(
           primary: AppColors.primary,
           secondary: AppColors.secondaryLight,
