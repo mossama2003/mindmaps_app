@@ -6,9 +6,9 @@ class AppSize {
   AppSize._();
 
   /// REFERENCE VALUES FROM THE FIGMA DESIGN.
-  static const num _designWidth = 430;
-  static const num _designHeight = 927;
-  static const num _designStatusBar = 48;
+  static const num _designWidth = 375;
+  static const num _designHeight = 812;
+  static const num _designStatusBar = 44;
 
   /// INITIALIZE SIZE USING THE PHYSICAL SIZE AND DEVICE PIXEL RATIO.
   static final Size _size =
