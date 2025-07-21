@@ -46,30 +46,22 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenUtilInit(
-      designSize: const Size(375, 812),
-      minTextAdapt: true,
-      splitScreenMode: true,
-
-      builder: (_, child) {
-        // return MultiBlocProvider(
-        //   providers: [
-        //     BlocProvider(create: (_) => UserCubit()),
-        // BlocProvider(create: (context) => ThemeCubit()..getSettings()),
-        // ],
-        // child:
-        return MaterialApp(
-          title: 'Mind Maps Quran',
-          home: const ParentSignUpScreen(),
-          theme: AppTheme.light,
-          locale: context.locale,
-          darkTheme: AppTheme.dark,
-          navigatorKey: AppNavigator.key,
-          debugShowCheckedModeBanner: false,
-          supportedLocales: context.supportedLocales,
-          localizationsDelegates: context.localizationDelegates,
-        );
-      },
+    // return MultiBlocProvider(
+    //   providers: [
+    //     BlocProvider(create: (_) => UserCubit()),
+    // BlocProvider(create: (context) => ThemeCubit()..getSettings()),
+    // ],
+    // child:
+    return MaterialApp(
+      title: 'Mind Maps Quran',
+      home: const ParentSignUpScreen(),
+      theme: AppTheme.light,
+      locale: context.locale,
+      darkTheme: AppTheme.dark,
+      navigatorKey: AppNavigator.key,
+      debugShowCheckedModeBanner: false,
+      supportedLocales: context.supportedLocales,
+      localizationsDelegates: context.localizationDelegates,
     );
   }
 }
