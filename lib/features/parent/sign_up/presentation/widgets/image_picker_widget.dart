@@ -55,7 +55,7 @@ class _ImagePickerWidgetState extends State<ImagePickerWidget> {
         SizedBox(height: AppSize.getHeight(5)),
         Container(
           width: double.infinity,
-          padding: EdgeInsets.symmetric(
+          padding:AppSize.padding(
             horizontal: AppSize.getWidth(12),
             vertical: AppSize.getHeight(5),
           ),
@@ -97,7 +97,7 @@ class _ImagePickerWidgetState extends State<ImagePickerWidget> {
                       onPressed: _pickImage,
                       style: ElevatedButton.styleFrom(
                         backgroundColor: AppColors.primary,
-                        padding: EdgeInsets.symmetric(
+                        padding: AppSize.padding(
                           horizontal: AppSize.getWidth(20),
                           vertical: AppSize.getHeight(5),
                         ),

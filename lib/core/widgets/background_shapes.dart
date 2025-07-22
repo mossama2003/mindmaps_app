@@ -9,7 +9,7 @@ class BackgroundShapes {
       top: 0,
       left: -3,
       child: CustomSvg(
-        svg: AppAssetsSvg.signUpBackgroundShape,
+        svg: AppAssetsSvg.backgroundShape,
         width: AppSize.getWidth(80),
       ),
     ),
@@ -17,7 +17,7 @@ class BackgroundShapes {
       bottom: 0,
       right: -3,
       child: CustomSvg(
-        svg: AppAssetsSvg.signUpBackgroundShape2,
+        svg: AppAssetsSvg.backgroundShape2,
         width: AppSize.getWidth(80),
       ),
     ),

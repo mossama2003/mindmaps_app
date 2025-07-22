@@ -50,7 +50,7 @@ class ParentSignUpScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(height: AppSize.getHeight(12)),
+                    SizedBox(height: AppSize.getHeight(13)),
 
                     /// Title
                     Text(
