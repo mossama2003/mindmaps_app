@@ -1,8 +1,8 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:image_picker/image_picker.dart';
-import '../../../../core/style/app_colors.dart';
+import '../../../../../core/style/app_size.dart';
+import '../../../../../core/style/app_colors.dart';
 import 'package:easy_localization/easy_localization.dart';
 
 class ImagePickerWidget extends StatefulWidget {
@@ -47,18 +47,24 @@ class _ImagePickerWidgetState extends State<ImagePickerWidget> {
       children: [
         Text(
           "sign_up.upload_child_image".tr(),
-          style: TextStyle(fontSize: 15.sp, fontWeight: FontWeight.w500),
+          style: TextStyle(
+            fontSize: AppSize.font(15),
+            fontWeight: FontWeight.w500,
+          ),
         ),
-        SizedBox(height: 5.h),
+        SizedBox(height: AppSize.getHeight(5)),
         Container(
           width: double.infinity,
-          padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 5.h),
+          padding: EdgeInsets.symmetric(
+            horizontal: AppSize.getWidth(12),
+            vertical: AppSize.getHeight(5),
+          ),
           decoration: BoxDecoration(
             border: Border.all(
               color: AppColors.grey80,
               style: BorderStyle.solid,
             ),
-            borderRadius: BorderRadius.circular(12.r),
+            borderRadius: BorderRadius.circular(AppSize.getWidth(12)),
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -71,16 +77,16 @@ class _ImagePickerWidgetState extends State<ImagePickerWidget> {
                         ? "sign_up.upload_from_device".tr()
                         : "sign_up.image_uploaded".tr(),
                     style: TextStyle(
-                      fontSize: 14.sp,
+                      fontSize: AppSize.font(14),
                       fontWeight: FontWeight.w600,
                     ),
                   ),
-                  SizedBox(height: 4.h),
+                  SizedBox(height: AppSize.getHeight(4)),
                   if (selectedImage == null)
                     Text(
                       "sign_up.image_format_note".tr(),
                       style: TextStyle(
-                        fontSize: 12.sp,
+                        fontSize: AppSize.font(12),
                         color: AppColors.black100,
                       ),
                     ),
@@ -92,16 +98,16 @@ class _ImagePickerWidgetState extends State<ImagePickerWidget> {
                       style: ElevatedButton.styleFrom(
                         backgroundColor: AppColors.primary,
                         padding: EdgeInsets.symmetric(
-                          horizontal: 20.w,
-                          vertical: 5.h,
+                          horizontal: AppSize.getWidth(20),
+                          vertical: AppSize.getHeight(5),
                         ),
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8.r),
+                          borderRadius: BorderRadius.circular(AppSize.getWidth(8)),
                         ),
                       ),
                       child: Text(
                         "sign_up.select_file".tr(),
-                        style: TextStyle(fontSize: 14.sp),
+                        style: TextStyle(fontSize: AppSize.font(14)),
                       ),
                     )
                   : Row(
@@ -110,7 +116,7 @@ class _ImagePickerWidgetState extends State<ImagePickerWidget> {
                           icon: Icon(
                             Icons.remove_red_eye,
                             color: AppColors.green400,
-                            size: 24.sp,
+                            size: AppSize.font(24),
                           ),
                           onPressed: _viewImage,
                         ),
@@ -118,7 +124,7 @@ class _ImagePickerWidgetState extends State<ImagePickerWidget> {
                           icon: Icon(
                             Icons.delete_forever_outlined,
                             color: AppColors.red300,
-                            size: 24.sp,
+                            size: AppSize.font(24),
                           ),
                           onPressed: _deleteImage,
                         ),

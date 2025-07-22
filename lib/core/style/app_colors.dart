@@ -13,7 +13,6 @@ class AppColors {
   static const Color warning = Color(0xffFA9D00);
   static const Color danger = Color(0xffEC1C1C);
 
-
   static const Color blanchedAlmond = Color(0xffFFF1CA);
 
   static const Color primary = Color(0xff2E7D32);
@@ -21,9 +20,9 @@ class AppColors {
   static const Color secondaryLight = black;
   static const Color secondaryDark = white;
 
-  static const Color chatGray =Color(0xffEEEEEE);
+  static const Color chatGray = Color(0xffEEEEEE);
 
-  static const Color chatBlue =Color(0xff375CA9);
+  static const Color chatBlue = Color(0xff375CA9);
 
   static Color get secondary => _isDark ? secondaryDark : secondaryLight;
 
@@ -47,6 +46,7 @@ class AppColors {
   static const Color green300 = Color(0xff05c212);
   static const Color green400 = Color(0xff04880d);
   static const Color green500 = Color(0xff03760b);
+  static const Color lightGreen = Color(0xffdce7d8);
 
   static const Color red50 = Color(0xfffde8e8);
   static const Color red75 = Color(0xfff7a2a2);

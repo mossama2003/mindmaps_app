@@ -1,16 +1,17 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:mindmaps_app/core/constants/app_constants.dart';
-import 'package:mindmaps_app/core/widgets/custom_button.dart';
-import 'package:mindmaps_app/core/widgets/custom_icon.dart';
+import '../../../../../core/constants/app_constants.dart';
+import '../../../../../core/widgets/background_shapes.dart';
+import '../../../../../core/widgets/custom_button.dart';
+import '../../../../../core/widgets/custom_icon.dart';
+import 'add_child_screen.dart';
 
-import '../../../../core/constants/app_assets.dart';
-import '../../../../core/helper/app_navigator.dart';
-import '../../../../core/style/app_colors.dart';
-import '../../../../core/style/app_size.dart';
-import '../../../../core/widgets/custom_field_text.dart';
-import '../../../parent/sign_in/presentation/screens/parent_sign_in_screen.dart';
+import '../../../../../core/constants/app_assets.dart';
+import '../../../../../core/helper/app_navigator.dart';
+import '../../../../../core/style/app_colors.dart';
+import '../../../../../core/style/app_size.dart';
+import '../../../../../core/widgets/custom_field_text.dart';
+import '../../../sign_in/presentation/screens/parent_sign_in_screen.dart';
 
 class ParentSignUpScreen extends StatelessWidget {
   const ParentSignUpScreen({super.key});
@@ -23,22 +24,7 @@ class ParentSignUpScreen extends StatelessWidget {
           height: double.infinity,
           child: Stack(
             children: [
-            Positioned(
-              top: 0,
-              left: 0,
-              child: CustomSvg(
-                svg: AppAssetsSvg.signUpBackgroundShape,
-                width: AppSize.getWidth(80),
-              ),
-            ),
-            Positioned(
-              bottom: 0,
-              right: 0,
-              child: CustomSvg(
-                svg: AppAssetsSvg.signUpBackgroundShape2,
-                width: AppSize.getWidth(80),
-              ),
-            ),
+              ...BackgroundShapes.items,
 
               SingleChildScrollView(
                 padding: AppSize.padding(horizontal: 24, vertical: 16),
@@ -46,7 +32,6 @@ class ParentSignUpScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    SizedBox(height: AppSize.getHeight(5)),
 
                     Center(
                       child: Container(
@@ -65,7 +50,7 @@ class ParentSignUpScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(height: AppSize.getHeight(5)),
+                    SizedBox(height: AppSize.getHeight(12)),
 
                     /// Title
                     Text(
@@ -77,7 +62,7 @@ class ParentSignUpScreen extends StatelessWidget {
                         color: AppColors.black,
                       ),
                     ),
-                    SizedBox(height: AppSize.getHeight(6.5)),
+                    SizedBox(height: AppSize.getHeight(8)),
 
                     /// Subtitle
                     Text(
@@ -119,7 +104,12 @@ class ParentSignUpScreen extends StatelessWidget {
                     SizedBox(height: AppSize.getHeight(47)),
 
                     /// Next Button
-                    CustomButton(title: 'sign_up.next'.tr(), onTap: () {}),
+                    CustomButton(
+                      title: 'sign_up.next'.tr(),
+                      onTap: () {
+                        AppNavigator.push(AddChildScreen());
+                      },
+                    ),
                     SizedBox(height: AppSize.getHeight(8)),
                     Text(
                       'sign_in.or'.tr(),

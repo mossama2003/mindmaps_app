@@ -1,9 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'core/helper/app_navigator.dart';
 import 'core/style/app_theme.dart';
-import 'features/parent_sign_up/presentation/pages/parent_sign_up_screen.dart';
+import 'features/parent/sign_up/presentation/screens/parent_sign_up_screen.dart';
 import 'package:flutter/services.dart';
 import 'core/helper/app_locals.dart';
 import 'core/network/local/cache/cache_helper.dart';

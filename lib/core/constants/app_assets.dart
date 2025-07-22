@@ -23,8 +23,6 @@ class AppAssetsSvg {
   static final String onboardingRecruiter2 = '$svg/onboarding_recruiter_2.svg';
   static final String onboardingRecruiter3 = '$svg/onboarding_recruiter_3.svg';
 
-  //  Sign up SVGs
-  static final String signUpAppLogo = '$svg/sign_up_app_logo.svg';
 
   static final String signUpBackgroundShape =
       '$svg/sign_up_background_shape.svg';

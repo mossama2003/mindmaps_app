@@ -1,13 +1,12 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
-import '../../../../core/constants/app_assets.dart';
-import '../../../../core/style/app_colors.dart';
-import '../../../../core/widgets/custom_button.dart';
-import 'child_details_fields.dart';
-import 'child_details_fields_two.dart';
-import 'gender_choice.dart';
+import '../../../../../core/style/app_size.dart';
+import '../../../../../core/widgets/background_shapes.dart';
+import '../../../../../core/style/app_colors.dart';
+import '../../../../../core/widgets/custom_button.dart';
+import '../widgets/child_details_fields.dart';
+import '../widgets/child_details_fields_two.dart';
+import '../widgets/gender_choice.dart';
 
 class ChildDetailsScreen extends StatefulWidget {
   const ChildDetailsScreen({super.key});
@@ -29,14 +28,16 @@ class _ChildDetailsScreenState extends State<ChildDetailsScreen> {
     }
   }
 
+  //  The screen body is changed with each subsequent step.
+
   Widget _buildStepContent() {
     switch (currentStep) {
       case 1:
-        return GenderChoice();
+        return const GenderChoice();
       case 2:
-        return ChildDetailsFields();
+        return const ChildDetailsFields();
       case 3:
-        return ChildDetailsFieldsTwo();
+        return const ChildDetailsFieldsTwo();
       default:
         return const SizedBox.shrink();
     }
@@ -52,60 +53,45 @@ class _ChildDetailsScreenState extends State<ChildDetailsScreen> {
           height: double.infinity,
           child: Stack(
             children: [
-              Positioned(
-                top: 0,
-                left: 0,
-                child: SvgPicture.asset(
-                  AppAssetsSvg.signUpBackgroundShape,
-                  width: 80.w,
-                ),
-              ),
-              Positioned(
-                bottom: 0,
-                right: 0,
-                child: SvgPicture.asset(
-                  AppAssetsSvg.signUpBackgroundShape2,
-                  width: 80.w,
-                ),
-              ),
+              ...BackgroundShapes.items,
+
               SingleChildScrollView(
                 child: Padding(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 24.w,
-                    vertical: 16.h,
+                padding:   AppSize.padding(
+                    horizontal: AppSize.getWidth(24),
+                    vertical: AppSize.getHeight(16),
                   ),
                   child: Column(
                     children: [
-                      SizedBox(height: 100.h),
+                      SizedBox(height: AppSize.getHeight(100)),
                       LinearProgressIndicator(
                         value: progress,
-                        minHeight: 5.h,
+                        minHeight: AppSize.getHeight(5),
                         backgroundColor: AppColors.grey30,
                         color: AppColors.primary,
-                        borderRadius: BorderRadius.circular(13.r),
+                        borderRadius: BorderRadius.circular(
+                          AppSize.getWidth(13),
+                        ),
                       ),
-                      SizedBox(height: 8.h),
+                      SizedBox(height: AppSize.getHeight(8)),
                       Center(
                         child: Text(
                           "$currentStep/3",
                           style: TextStyle(
-                            fontSize: 14.sp,
+                            fontSize: AppSize.font(14),
                             fontWeight: FontWeight.w500,
                           ),
                         ),
                       ),
-                      SizedBox(height: 24.h),
+                      SizedBox(height: AppSize.getHeight(24)),
                       _buildStepContent(),
 
-                      SizedBox(height: 20.h),
+                      SizedBox(height: AppSize.getHeight(20)),
                       CustomButton(
                         title: currentStep < 3
                             ? "sign_up.next".tr()
                             : "sign_up.save".tr(),
-
-                        onTap: () {
-                          _nextStep();
-                        },
+                        onTap: _nextStep,
                       ),
                     ],
                   ),

@@ -1,15 +1,15 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import '../../../../../core/constants/app_assets.dart';
-import '../../../../../core/helper/app_navigator.dart';
-import '../../../../../core/widgets/custom_button.dart';
-import '../../../../../core/widgets/custom_icon.dart';
-import '../../../../parent_sign_up/presentation/pages/parent_sign_up_screen.dart';
 
+import '../../../../../core/constants/app_assets.dart';
 import '../../../../../core/constants/app_constants.dart';
+import '../../../../../core/helper/app_navigator.dart';
 import '../../../../../core/style/app_colors.dart';
 import '../../../../../core/style/app_size.dart';
+import '../../../../../core/widgets/custom_button.dart';
 import '../../../../../core/widgets/custom_field_text.dart';
+import '../../../../../core/widgets/custom_icon.dart';
+import '../../../sign_up/presentation/screens/parent_sign_up_screen.dart';
 
 class ParentSignInScreen extends StatefulWidget {
   const ParentSignInScreen({super.key});

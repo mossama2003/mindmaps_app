@@ -1,11 +1,11 @@
-import '../../../../core/constants/app_assets.dart';
 import 'package:easy_localization/easy_localization.dart';
-import '../../../../core/helper/app_navigator.dart';
-import '../../../../core/style/app_size.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../core/constants/app_assets.dart';
 import '../../../../core/constants/app_constants.dart';
+import '../../../../core/helper/app_navigator.dart';
 import '../../../../core/style/app_colors.dart';
+import '../../../../core/style/app_size.dart';
 import '../../../parent/sign_in/presentation/screens/parent_sign_in_screen.dart';
 import '../cards/intro_type_card.dart';
 
